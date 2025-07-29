@@ -5,31 +5,32 @@
   box-sizing: border-box;
 }
 
-/* Tipografía y fondo */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #0d0d0d;
+  color: #00ff88;
+  font-family: 'Courier New', Courier, monospace;
   line-height: 1.6;
   padding-bottom: 3rem;
 }
 
 /* Cabecera */
 header {
-  background-color: #20232a;
-  color: #fff;
+  background-color: #000;
+  color: #00ff88;
   padding: 2rem 1rem;
   text-align: center;
+  border-bottom: 2px solid #00ff88;
 }
 
 header h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px #00ff88;
 }
 
 header p {
   font-size: 1.2rem;
-  color: #ccc;
+  color: #66ffcc;
 }
 
 /* Secciones */
@@ -40,18 +41,19 @@ section {
 }
 
 section h2 {
-  font-size: 2rem;
-  color: #20232a;
+  font-size: 1.8rem;
+  color: #00ff88;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 1px dashed #00ff88;
   padding-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 article {
   margin-bottom: 1.5rem;
 }
 
-/* Educación e idiomas */
+/* Listas */
 ul {
   list-style: none;
   padding-left: 0;
@@ -61,24 +63,31 @@ ul li {
   margin-bottom: 0.8rem;
 }
 
-/* Habilidades */
+/* Grid de habilidades */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 1rem;
   justify-items: center;
   align-items: center;
   margin-top: 1rem;
+  background-color: #111;
+  padding: 1rem;
+  border: 1px solid #00ff88;
+  border-radius: 8px;
 }
 
 .skills-grid div {
   text-align: center;
+  font-size: 0.8rem;
+  color: #66ffcc;
 }
 
 .skills-grid img {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 0.5rem;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.3rem;
+  filter: drop-shadow(0 0 2px #00ff88);
 }
 
 /* Contacto */
@@ -87,10 +96,11 @@ ul li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  color: #99ffbb;
 }
 
 a {
-  color: #0066cc;
+  color: #00ffaa;
   text-decoration: none;
 }
 
@@ -102,11 +112,10 @@ a:hover {
 footer {
   text-align: center;
   padding: 1rem;
-  background-color: #20232a;
-  color: #fff;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  background-color: #000;
+  color: #00ff88;
+  font-size: 0.9rem;
+  border-top: 1px solid #00ff88;
 }
 
 /* Responsive */
