@@ -1,130 +1,42 @@
-/* Reset básico */
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
-body {
+.split-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Lado izquierdo - Ingeniería del Software */
+.software {
+  flex: 1;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 3rem;
+}
+
+.software h1 {
+  color: #0056b3;
+}
+
+/* Lado derecho - Ciberseguridad estilo hacker */
+.cybersecurity {
+  flex: 1;
   background-color: #0d0d0d;
   color: #00ff88;
-  font-family: 'Courier New', Courier, monospace;
-  line-height: 1.6;
-  padding-bottom: 3rem;
+  padding: 3rem;
+  font-family: 'Courier New', monospace;
 }
 
-/* Cabecera */
-header {
-  background-color: #000;
+.cybersecurity h1 {
   color: #00ff88;
-  padding: 2rem 1rem;
-  text-align: center;
-  border-bottom: 2px solid #00ff88;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
   text-shadow: 0 0 5px #00ff88;
 }
 
-header p {
-  font-size: 1.2rem;
-  color: #66ffcc;
-}
-
-/* Secciones */
-section {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
-}
-
-section h2 {
-  font-size: 1.8rem;
-  color: #00ff88;
-  margin-bottom: 1rem;
-  border-bottom: 1px dashed #00ff88;
-  padding-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-
-article {
-  margin-bottom: 1.5rem;
-}
-
-/* Listas */
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-ul li {
-  margin-bottom: 0.8rem;
-}
-
-/* Grid de habilidades */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-  gap: 1rem;
-  justify-items: center;
-  align-items: center;
-  margin-top: 1rem;
-  background-color: #111;
-  padding: 1rem;
-  border: 1px solid #00ff88;
-  border-radius: 8px;
-}
-
-.skills-grid div {
-  text-align: center;
-  font-size: 0.8rem;
-  color: #66ffcc;
-}
-
-.skills-grid img {
-  width: 32px;
-  height: 32px;
-  margin-bottom: 0.3rem;
-  filter: drop-shadow(0 0 2px #00ff88);
-}
-
-/* Contacto */
-#contact p {
-  margin: 0.5rem 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #99ffbb;
-}
-
-a {
-  color: #00ffaa;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #000;
-  color: #00ff88;
-  font-size: 0.9rem;
-  border-top: 1px solid #00ff88;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  section h2 {
-    font-size: 1.5rem;
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .split-container {
+    flex-direction: column;
   }
 }
