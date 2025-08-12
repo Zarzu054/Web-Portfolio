@@ -104,10 +104,3 @@ body {
   background: rgba(0,0,0,0.3);
   border-radius: 3px;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .card {
-    height: 95vh;
-  }
-}
