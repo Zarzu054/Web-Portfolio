@@ -8,7 +8,7 @@ Este es mi **portfolio web personal**, donde muestro mi perfil profesional, expe
 ## 🚀 Visualiza el portfolio
 
 Puedes acceder al portfolio online en el siguiente enlace:  
-🔗 **[https://carzarrei.github.io/Web-Protfolio](https://carzarrei.github.io/Web-Protfolio)**
+🔗 **[https://carzarrei.github.io/Web-Portfolio](https://carzarrei.github.io/Web-Porttfolio)**
 
 ---
 
