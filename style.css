@@ -36,7 +36,7 @@ body {
   border-radius: 10px;
 }
 
-/* Cara frontal - Software */
+/* Cara frontal - Ingeniería Software */
 .front {
   background: #f9f9f9;
   color: #333;
@@ -97,7 +97,7 @@ body {
   color: #0d0d0d;
 }
 
-/* Scroll en pantallas pequeñas */
+/* Scroll personalizado */
 .front::-webkit-scrollbar, .back::-webkit-scrollbar {
   width: 6px;
 }
@@ -106,6 +106,7 @@ body {
   border-radius: 3px;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .card {
     height: 95vh;
