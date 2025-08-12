@@ -8,7 +8,7 @@ body {
 }
 
 .card-container {
-  perspective: 100vh;
+  perspective: 100%;
 }
 
 .card {
