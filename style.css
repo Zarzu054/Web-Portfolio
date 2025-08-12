@@ -8,25 +8,25 @@ body {
   height: 100vh;
 }
 
-/* Lado izquierdo - Ingeniería del Software */
+/* Mitad Izquierda - Software */
 .software {
   flex: 1;
   background-color: #f9f9f9;
   color: #333;
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .software h1 {
   color: #0056b3;
 }
 
-/* Lado derecho - Ciberseguridad estilo hacker */
+/* Mitad Derecha - Hacker */
 .cybersecurity {
   flex: 1;
   background-color: #0d0d0d;
   color: #00ff88;
-  padding: 3rem;
   font-family: 'Courier New', monospace;
+  padding: 2rem;
 }
 
 .cybersecurity h1 {
@@ -34,7 +34,32 @@ body {
   text-shadow: 0 0 5px #00ff88;
 }
 
-/* Responsive para móviles */
+/* Grid de skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.skills-grid img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Light skills */
+.skills-grid.light span {
+  color: #333;
+}
+
+/* Dark skills */
+.skills-grid.dark span {
+  color: #66ffcc;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .split-container {
     flex-direction: column;
