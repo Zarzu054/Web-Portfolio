@@ -9,12 +9,13 @@ body {
 }
 
 .card-container {
-  perspective: 100vh;
+  perspective: 1000px;
 }
 
 .card {
-  width: 100vh;
-  height: 100vh;
+  width: 95vw;
+  max-width: 900px;
+  height: 90vh;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.8s ease-in-out;
@@ -103,4 +104,11 @@ body {
 .front::-webkit-scrollbar-thumb, .back::-webkit-scrollbar-thumb {
   background: rgba(0,0,0,0.3);
   border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    height: 95vh;
+  }
 }
