@@ -1,46 +1,78 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
-}
-
-.split-container {
+  background: #eaeaea;
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
-/* Mitad Izquierda - Software */
-.software {
-  flex: 1;
-  background-color: #f9f9f9;
-  color: #333;
-  padding: 2rem;
+.card-container {
+  perspective: 1000px;
 }
 
-.software h1 {
+.card {
+  width: 95vw;
+  max-width: 900px;
+  height: 90vh;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 2rem;
+  overflow-y: auto;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/* Cara frontal - Software */
+.front {
+  background: #f9f9f9;
+  color: #333;
+}
+
+.front header h1 {
   color: #0056b3;
 }
 
-/* Mitad Derecha - Hacker */
-.cybersecurity {
-  flex: 1;
-  background-color: #0d0d0d;
-  color: #00ff88;
-  font-family: 'Courier New', monospace;
-  padding: 2rem;
+.skills-grid.light span {
+  color: #333;
 }
 
-.cybersecurity h1 {
+/* Cara trasera - Ciberseguridad */
+.back {
+  background: #0d0d0d;
+  color: #00ff88;
+  font-family: 'Courier New', monospace;
+  transform: rotateY(180deg);
+}
+
+.back header h1 {
   color: #00ff88;
   text-shadow: 0 0 5px #00ff88;
 }
 
-/* Grid de skills */
+.skills-grid.dark span {
+  color: #66ffcc;
+}
+
+/* Skills Grid */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 1rem;
   justify-items: center;
-  align-items: center;
   margin-top: 1rem;
 }
 
@@ -49,19 +81,33 @@ body {
   height: 32px;
 }
 
-/* Light skills */
-.skills-grid.light span {
-  color: #333;
+/* Botones */
+.flip-btn {
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-/* Dark skills */
-.skills-grid.dark span {
-  color: #66ffcc;
+.back .flip-btn {
+  background: #00ff88;
+  color: #0d0d0d;
 }
 
-/* Responsive */
+/* Scroll en pantallas pequeñas */
+.front::-webkit-scrollbar, .back::-webkit-scrollbar {
+  width: 6px;
+}
+.front::-webkit-scrollbar-thumb, .back::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.3);
+  border-radius: 3px;
+}
+
 @media (max-width: 768px) {
-  .split-container {
-    flex-direction: column;
+  .card {
+    height: 95vh;
   }
 }
