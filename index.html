@@ -9,85 +9,71 @@
 </head>
 <body>
 
-<div class="card-container">
-  <div class="card" id="portfolioCard">
+<div class="portfolio">
 
-    <!-- Cara frontal: Ingeniería del Software -->
-    <div class="front">
-      <header>
-        <h1>Carlos Zarzuela Reina</h1>
-        <p>Ingeniero del Software</p>
-      </header>
-
-      <section>
+  <!-- Tarjeta: Sobre mí -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front light-theme">
         <h2>Sobre mí</h2>
-        <p>Graduado en Ingeniería del Software con experiencia en desarrollo backend y frontend, y una gran pasión por crear soluciones eficientes y escalables.</p>
-      </section>
-
-      <section>
-        <h2>Experiencia</h2>
-        <article>
-          <h3>IR Soluciones – Desarrollador de software junior (2024)</h3>
-          <p>Desarrollo y mantenimiento de aplicaciones PHP con MySQL, usando Git y CodeIgniter.</p>
-        </article>
-        <article>
-          <h3>Universidad de Sevilla – Proyecto IT Talent (2024)</h3>
-          <p>Plataforma para reclutadores que analiza perfiles de GitHub. Backend con Node.js, Express y TypeScript.</p>
-        </article>
-      </section>
-
-      <section>
-        <h2>Habilidades</h2>
-        <div class="skills-grid light">
-          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" /><span>HTML</span></div>
-          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" /><span>CSS</span></div>
-          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /><span>JS</span></div>
-          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" /><span>TS</span></div>
-          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /><span>React</span></div>
-          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /><span>Node.js</span></div>
-          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" /><span>PHP</span></div>
-          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /><span>MySQL</span></div>
-        </div>
-      </section>
-
-      <button class="flip-btn" onclick="flipCard()">Ver Ciberseguridad</button>
+        <p>Graduado en Ingeniería del Software con experiencia en desarrollo backend y frontend, apasionado por crear soluciones eficientes y escalables.</p>
+      </div>
+      <div class="flip-card-back dark-theme">
+        <h2>Perfil en Ciberseguridad</h2>
+        <p>Especializado en ciberseguridad ofensiva, auditorías, Red Team y pruebas de penetración.</p>
+      </div>
     </div>
-
-    <!-- Cara trasera: Ciberseguridad -->
-    <div class="back">
-      <header>
-        <h1>Carlos Zarzuela Reina</h1>
-        <p>Pentester Junior</p>
-      </header>
-
-      <section>
-        <h2>Especialidad</h2>
-        <p>Especializado en ciberseguridad ofensiva, con experiencia en auditorías, pruebas de penetración y técnicas de Red Team.</p>
-      </section>
-
-      <section>
-        <h2>Habilidades</h2>
-        <div class="skills-grid dark">
-          <div><img src="https://img.icons8.com/color/48/000000/wireshark.png" alt="Wireshark" /><span>Wireshark</span></div>
-          <div><img src="https://img.icons8.com/fluency/48/000000/nmap.png" alt="Nmap" /><span>Nmap</span></div>
-          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" /><span>Bash</span></div>
-          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/powershell/powershell-original.svg" alt="PowerShell" /><span>PowerShell</span></div>
-          <div><img src="https://img.icons8.com/ios/48/00ff88/hacker.png" alt="Phishing" /><span>Phishing</span></div>
-          <div><img src="https://img.icons8.com/external-outline-juicy-fish/48/00ff88/external-metasploit-hacking-outline-outline-juicy-fish.png" alt="Metasploit" /><span>Metasploit</span></div>
-        </div>
-      </section>
-
-      <button class="flip-btn" onclick="flipCard()">Volver</button>
-    </div>
-
   </div>
-</div>
 
-<script>
-function flipCard() {
-  document.getElementById('portfolioCard').classList.toggle('flipped');
-}
-</script>
+  <!-- Tarjeta: Experiencia -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front light-theme">
+        <h2>Experiencia</h2>
+        <h3>IR Soluciones – Desarrollador junior (2024)</h3>
+        <p>Desarrollo y mantenimiento de aplicaciones PHP con MySQL, usando Git y CodeIgniter.</p>
+        <h3>Universidad de Sevilla – Proyecto IT Talent (2024)</h3>
+        <p>Plataforma que analiza perfiles de GitHub. Backend con Node.js, Express y TypeScript.</p>
+      </div>
+      <div class="flip-card-back dark-theme">
+        <h2>Proyectos Ciberseguridad</h2>
+        <ul>
+          <li>Simulación de ataques Red Team</li>
+          <li>Explotación de vulnerabilidades</li>
+          <li>Auditorías con Nmap, SQLMap, Metasploit</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tarjeta: Habilidades -->
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front light-theme">
+        <h2>Habilidades Software</h2>
+        <div class="skills-grid">
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /><span>HTML</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /><span>CSS</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /><span>JS</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" /><span>TS</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /><span>React</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" /><span>Node.js</span></div>
+        </div>
+      </div>
+      <div class="flip-card-back dark-theme">
+        <h2>Habilidades Ciberseguridad</h2>
+        <div class="skills-grid">
+          <div><img src="https://img.icons8.com/color/48/000000/wireshark.png" /><span>Wireshark</span></div>
+          <div><img src="https://img.icons8.com/fluency/48/000000/nmap.png" /><span>Nmap</span></div>
+          <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" /><span>Bash</span></div>
+          <div><img src="https://img.icons8.com/ios/48/00ff88/hacker.png" /><span>Phishing</span></div>
+          <div><img src="https://img.icons8.com/external-outline-juicy-fish/48/00ff88/external-metasploit-hacking-outline-outline-juicy-fish.png" /><span>Metasploit</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 </body>
 </html>
