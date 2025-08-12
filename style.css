@@ -2,66 +2,56 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
   background: #eaeaea;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  padding: 2rem;
 }
 
-.card-container {
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.flip-card {
+  background: transparent;
   perspective: 1000px;
 }
 
-.card {
-  width: 100vw;
-  height: 100vh;
+.flip-card-inner {
   position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
-  transition: transform 0.8s ease-in-out;
 }
 
-.card.flipped {
+.flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.front, .back {
+.flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  padding: 2rem;
-  overflow-y: auto;
+  border-radius: 8px;
+  padding: 1rem;
   box-sizing: border-box;
 }
 
-/* Cara frontal - Ingeniería Software */
-.front {
+.light-theme {
   background: #f9f9f9;
   color: #333;
 }
 
-.front header h1 {
-  color: #0056b3;
-}
-
-.skills-grid.light span {
-  color: #333;
-}
-
-/* Cara trasera - Ciberseguridad */
-.back {
+.dark-theme {
   background: #0d0d0d;
   color: #00ff88;
   font-family: 'Courier New', monospace;
+}
+
+.flip-card-back {
   transform: rotateY(180deg);
-}
-
-.back header h1 {
-  color: #00ff88;
-  text-shadow: 0 0 5px #00ff88;
-}
-
-.skills-grid.dark span {
-  color: #66ffcc;
 }
 
 /* Skills Grid */
@@ -78,34 +68,8 @@ body {
   height: 32px;
 }
 
-/* Botones */
-.flip-btn {
-  margin-top: 2rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  background: #333;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.back .flip-btn {
-  background: #00ff88;
-  color: #0d0d0d;
-}
-
-/* Scroll personalizado */
-.front::-webkit-scrollbar, .back::-webkit-scrollbar {
-  width: 6px;
-}
-.front::-webkit-scrollbar-thumb, .back::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.3);
-  border-radius: 3px;
-}
-
-/* Responsive */
-@media () {
-  .card {
-    height: 100vh;
-  }
+.skills-grid span {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
 }
