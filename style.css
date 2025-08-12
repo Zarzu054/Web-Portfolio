@@ -2,7 +2,6 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
   background: #eaeaea;
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
