@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/images/icon.png" type="image/png">
   <title>Carlos Zarzuela Reina - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,11 +12,12 @@
 <header class="site-header">
   <div class="header-inner">
     <!-- Cambia la ruta y el nombre del archivo por tu foto -->
-    <img src="Foto CV.jpg" alt="Foto de Carlos Zarzuela Reina" class="avatar">
+    <img src="assets/images/photo.jpg" class="avatar">
     <div class="title-group">
       <h1>Carlos Zarzuela Reina</h1>
       <p>Ingeniero del Software | Pentester Junior</p>
     </div>
+   
   </div>
 </header>
 
@@ -28,22 +30,16 @@
       <div class="face front light">
         <h2>Sobre mí</h2>
         <p>
-          <b>- ¿Quien soy?</b> 
-          Sobre todo, una persona paciente que no se 
-          estresa fácilmente ante los problemas.
-          Destaco por mi pensamiento lógico y mi razonamiento. 
-          Tolerante y un buen compañero de equipo. Disfruto 
-          trabajando en equipo y conociendo a mis compañeros. 
-          También aprendo rápido (sobre todo de forma práctica).
+          <b>¿Quien soy?</b> 
         </p>
         <p>
-          <b>- ¿Cuál es mi propuesta de valor?</b> 
-          Como perfil profesional, dispongo de 2 puntos de vista paralelos a la hora de 
-          abarcar problemas en el sector, el de desarrollador e 
-          Ingeniero de Software, y el de hacker ético en 
-          ciberseguridad ofensiva. Teniendo una visión global de 
-          problemas que pueden surgir y la capacidad para 
-          resolverlos.
+          Una persona paciente, lógica, tolerante, buen compañero de equipo y de aprendizaje rápido y práctico.
+        </p>
+        <p>
+          <b>¿Cuál es mi propuesta de valor?</b> 
+        </p>
+        <p>            
+          Combino experiencia en desarrollo de software y ciberseguridad ofensiva para abordar problemas con una visión integral.
         </p>
       </div>
     </div>
@@ -55,11 +51,11 @@
       <div class="face front light">
         <h2>Experiencia</h2>
         <article>
-          <h3>IR Soluciones – Desarrollador junior (2024)</h3>
+          <h3>IR Soluciones - Desarrollador junior (2024)</h3>
           <p>Desarrollo y mantenimiento de aplicaciones PHP con MySQL, usando Git y CodeIgniter.</p>
         </article>
         <article>
-          <h3>Universidad de Sevilla – Proyecto IT Talent (2024)</h3>
+          <h3>Universidad de Sevilla - Proyecto IT Talent (2024)</h3>
           <p>Plataforma que analiza perfiles de GitHub. Backend con Node.js, Express y TypeScript.</p>
         </article>
         <button class="btn primary" onclick="flipCard('experienceCard')">Ver Ciberseguridad</button>
@@ -124,23 +120,79 @@
     </div>
   </section>
 
+  <!-- Sección: Títulos -->
+  <section class="flip-card">
+    <div class="flip-inner" id="titlesCard">
+      <div class="face front light">
+        <h2>Títulos</h2>
+        <h3> Grado en Ingeniería del Software</h3>
+        <p> <img style="width: 2%; height: 2%;" src="assets/images/ubi.png" alt="Ubicacion"> Universidad de Sevilla</p>
+        <img src="assets/images/universidad.png" alt="Título obtenido, en proceso de recepción"><br>
+        <button class="btn primary" onclick="flipCard('titlesCard')">Ciberseguridad e IA</button>
+      </div>
+      <div class="face back dark">
+        <h2>Títulos</h2>
+        <h3>Máster en Ciberseguridad e Inteligencia Artificial</h3>
+        <p> <img style="width: 2%; height: 2%;" src="assets/images/ubi.png" alt="Ubicacion"> Evolve Academy</p>
+        <img style="max-width: 50%; height: auto;" src="assets/images/evolve.png"><br>
+        <button class="btn accent" onclick="flipCard('titlesCard')">Ingeniería del Software</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección: Certificados -->
+  <section class="flip-card">
+    <div class="flip-inner" id="certificatesCard">
+      <div class="face front light">
+        <h2>Certificados</h2>
+        <p>Algunos de los certificados que he obtenido:</p>
+        <div class="certificates-grid">
+          <img style="max-width: 50%; height: auto;" src="assets/images/eJPTv2.png" alt="Certificado 1">
+      </div>
+    </div>
+  </section>
+  
+  <!-- Sección: CV -->
+  <section class="flip-card">
+    <div class="flip-inner" id="cvCard">
+      <div class="face front light">
+        <h2>Currículum Vitae</h2>
+        <p>Descarga mi CV en PDF para más detalles sobre mi experiencia y habilidades.</p> <br>
+        <a href="assets/docs/CV_Carlos_Zarzuela_Reina.pdf" class="btn primary" target="_blank">Descargar CV</a>
+        <a href="https://flowcv.com/resume/6e97er802wfb" class="btn secondary" target="_blank">Ver CV Online</a>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+      <h2>Contacto</h2>
+      <ul class="contact-list">
+        <li>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" alt="Email Icon" class="icon">
+          <a href="mailto:carloszarzuelar@gmail.com">carloszarzuelar@gmail.com</a>
+        </li>
+        <li>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn Icon" class="icon">
+          <a href="https://www.linkedin.com/in/carlos-zarzuela-reina/" target="_blank">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 
 <script>
 function flipCard(id){
   const card = document.getElementById(id);
   card.classList.toggle("flipped");
 
-  // escoger la cara visible
   const visibleFace = card.classList.contains("flipped")
     ? card.querySelector(".back")
     : card.querySelector(".front");
 
-  // 🔥 ajustar altura de la tarjeta
   card.style.height = visibleFace.scrollHeight + "px";
 }
 
-// al cargar, ajustar altura de cada tarjeta
 window.addEventListener("load", () => {
   document.querySelectorAll(".flip-inner").forEach(card => {
     const front = card.querySelector(".front");

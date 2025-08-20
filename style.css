@@ -18,7 +18,7 @@ body {
 }
 
 .site-header{
-  background:#0056b3; /* mantiene tu color de marca */
+  background:#0056b3;
   color:#fff;
   padding:2rem 1rem;
 }
@@ -32,7 +32,7 @@ body {
 }
 
 .avatar{
-  width:96px;              /* puedes subir a 120–140 si quieres más presencia */
+  width:96px;             
   height:96px;
   border-radius:50%;
   object-fit:cover;
@@ -147,6 +147,60 @@ body {
 .skills-grid span {
   margin-top:.3rem;
   font-size:.85rem;
+}
+
+.site-footer {
+  background-color: #3399ff; /* Lighter blue than the header */
+  color: #ffffff; /* White text for visibility */
+  text-align: center;
+  border-top: none; /* Remove the border for a cleaner look */
+  padding: 2rem 1rem;
+}
+
+.footer-inner h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-list .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.contact-list a {
+  text-decoration: none;
+  color: #ffffff; /* White text for visibility */
+  font-weight: bold;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.certificates-grid img {
+  width: 100%;
+  height: auto;
 }
 
 /* Responsive */
